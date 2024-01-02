@@ -3,7 +3,7 @@ sys.path.insert(0,'./keops')
 
 import os
 os.environ["CUDA_VISIBLE_DEVICES"]="0"
-os.environ["USE_KEOPS"] = "True";
+os.environ["USE_KEOPS"] = "True"
 
 import pickle
 import numpy as np
@@ -18,9 +18,10 @@ from argparse import ArgumentParser
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from pytorch_lightning.loggers import TensorBoardLogger
 
+
 def run_training_process(run_params):
-    
     train_data = None
+    val_data = None
     test_data = None
     
     if run_params.dataset in ['Cora', 'CiteSeer', 'PubMed']:
