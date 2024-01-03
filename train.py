@@ -98,7 +98,7 @@ if __name__ == "__main__":
                               '--check_val_every_n_epoch','1'])
     parser.add_argument("--num_gpus", default=10, type=int)
     
-    parser.add_argument("--dataset", default='Cora')
+    parser.add_argument("--dataset", default='PubMed')
     parser.add_argument("--fold", default='0', type=int) #Used for k-fold cross validation in tadpole/ukbb
     
     
